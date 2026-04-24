@@ -14,8 +14,7 @@ function Home() {
           <ProgressCard />
           <EventsList />
           <TasksList />
-          {/* Bottom padding so content isn't hidden behind nav */}
-          <div style={{ height: '32px' }} />
+          <div style={{ height: '16px' }} />
         </main>
       </div>
       <BottomNav />

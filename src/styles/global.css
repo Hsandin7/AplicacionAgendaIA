@@ -137,7 +137,8 @@ img, svg {
   max-width: var(--app-max-width);
   min-height: 100vh;
   background-color: var(--color-bg);
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
 }
 
@@ -158,15 +159,19 @@ img, svg {
 
 /* --- Page Container --- */
 .page-container {
-  padding-bottom: var(--bottom-nav-height);
-  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .page-scroll {
-  height: calc(100vh - var(--bottom-nav-height));
+  flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
 }
 
 .page-scroll::-webkit-scrollbar {

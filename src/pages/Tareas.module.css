@@ -1,0 +1,202 @@
+/* =============================================
+   TAREAS PAGE — Styles
+   ============================================= */
+
+/* ---- Header ---- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px 12px;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border-light);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.headerBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.headerBtn:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.headerBtn:active {
+  transform: scale(0.92);
+}
+
+.addBtn {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+.headerTitle {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* ---- Filters ---- */
+.filters {
+  display: flex;
+  gap: 8px;
+  padding: 14px 20px 10px;
+  background-color: var(--color-surface);
+}
+
+.filterBtn {
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  border: 1.5px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.filterBtn:active {
+  transform: scale(0.95);
+}
+
+.filterBtn.filterActive {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(124, 111, 247, 0.3);
+}
+
+/* ---- Content scroll area ---- */
+.content {
+  padding: 8px 0 16px;
+}
+
+/* ---- Section ---- */
+.section {
+  margin-bottom: 4px;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 14px 20px 6px;
+}
+
+/* ---- Task item ---- */
+.taskItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 20px;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border-light);
+  transition: background-color var(--transition-fast);
+  cursor: pointer;
+}
+
+.taskItem:first-of-type {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.taskItem:active {
+  background-color: var(--color-primary-light);
+}
+
+/* Checkbox */
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  border: 2px solid var(--color-border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  background-color: transparent;
+}
+
+.checkbox.checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.checkbox.checked::after {
+  content: '';
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translate(-1px, -1px);
+  display: block;
+}
+
+/* Task text */
+.taskText {
+  flex: 1;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  font-weight: 450;
+  line-height: 1.4;
+  transition: color var(--transition-fast);
+}
+
+.taskText.done {
+  color: var(--color-text-tertiary);
+  text-decoration: line-through;
+}
+
+/* Priority badge */
+.badge {
+  font-size: 0.625rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+.badgeHigh {
+  background-color: #FDEAEA;
+  color: #D94F4F;
+}
+
+.badgeMed {
+  background-color: #FFF3E0;
+  color: #D4830A;
+}
+
+.badgeLow {
+  background-color: #E8F0FE;
+  color: #3A6FC4;
+}
+
+/* Date label */
+.dateLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  font-weight: 500;
+  white-space: nowrap;
+}
