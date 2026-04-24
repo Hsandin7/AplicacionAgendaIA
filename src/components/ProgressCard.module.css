@@ -1,0 +1,76 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #EAE8FF 0%, #DDD9FF 100%);
+  border-radius: var(--radius-xl);
+  padding: 20px 22px;
+  box-shadow: 0 4px 16px rgba(124, 111, 247, 0.18);
+  margin: 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: 60px;
+  width: 80px;
+  height: 80px;
+  background: rgba(124, 111, 247, 0.08);
+  border-radius: 50%;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  background: rgba(124, 111, 247, 0.05);
+  border-radius: 50%;
+}
+
+.info {
+  flex: 1;
+}
+
+.title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Circular Progress */
+.progressRing {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.progressRing svg {
+  transform: rotate(0deg);
+}
+
+.progressArc {
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progressLabel {
+  position: absolute;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.03em;
+}
