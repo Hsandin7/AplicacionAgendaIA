@@ -1,0 +1,182 @@
+/* =============================================
+   DOCUMENTOS PAGE — Styles
+   ============================================= */
+
+/* ---- Header ---- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 20px 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-bg);
+}
+
+.headerTitle {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* ---- Search Bar ---- */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px 16px;
+  background-color: var(--color-bg);
+}
+
+.searchInputWrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  color: var(--color-text-tertiary);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  height: 44px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-full);
+  padding: 0 16px 0 42px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.searchInput:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(124, 111, 247, 0.12);
+  outline: none;
+}
+
+.addBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(124, 111, 247, 0.25);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.addBtn:active {
+  transform: scale(0.92);
+}
+
+/* ---- Filters ---- */
+.filters {
+  display: flex;
+  gap: 8px;
+  padding: 0 20px 16px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+.filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filterBtn {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  border: 1.5px solid var(--color-border-light);
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.filterBtn.filterActive {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+/* ---- Document List ---- */
+.docList {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 20px;
+}
+
+.docItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border-light);
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.docItem:last-child {
+  border-bottom: none;
+}
+
+.docItem:active {
+  opacity: 0.6;
+}
+
+.docIconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.docIconPdf { background-color: #FDEAEA; color: #D94F4F; }
+.docIconDocx { background-color: #E8F0FE; color: #3A6FC4; }
+.docIconMp4 { background-color: #F3E8FF; color: #8B5CF6; }
+.docIconZip { background-color: #F3F4F6; color: #6B7280; }
+
+.docInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.docTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.docMeta {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+}
+
+.docArrow {
+  color: var(--color-text-tertiary);
+  opacity: 0.5;
+}
