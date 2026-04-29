@@ -163,6 +163,7 @@ img, svg {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding-bottom: var(--bottom-nav-height);
 }
 
 .page-scroll {

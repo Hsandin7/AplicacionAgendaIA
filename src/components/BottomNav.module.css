@@ -65,6 +65,7 @@
   align-items: flex-start;
   justify-content: center;
   flex: 1;
+  text-decoration: none;
 }
 
 .fab {
@@ -90,4 +91,8 @@
 .fab:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 28px rgba(124, 111, 247, 0.45);
+}
+
+.fabHighlight {
+  box-shadow: 0 0 0 3px rgba(124, 111, 247, 0.25), 0 8px 20px rgba(124, 111, 247, 0.35);
 }
